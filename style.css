@@ -1,0 +1,374 @@
+font-face {
+    font-family: myFirstFont;
+    src: url(PlayfairDisplay-Italic.ttf);
+}
+
+.prova{
+    position:absolute;
+    color: white;
+}
+
+a{
+    text-decoration: none;
+    color:white;
+    padding: 20px;
+    padding-right: 5vw;
+    padding-left: 5vw;
+}
+
+a:hover{
+    color:black;
+}
+
+h2{
+    font-family: myFirstFont;
+    color: white;
+    padding: 1vw;
+}
+
+.border{
+    border-bottom: 1px solid white;
+}
+
+body{
+    background-image: url(https://image.ibb.co/jODqtK/Blue_Hearts_Background18_min.jpg);
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-position: center;
+}
+
+/* title css */
+
+}
+body{
+  font-family: 'Lato', sans-serif;
+  margin: 0px;
+  padding: 0px;
+}
+div.foo{
+  border-radius: 5px;
+  background: rgba(2, 15, 34, 0.8);
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
+.letter{
+  display: inline-block;
+  font-weight: 900;
+  font-size: 6em;
+  margin: 0.2em;
+  position: relative;
+  color: rgba(90, 148, 216);
+  transform-style: preserve-3d;
+  perspective: 400;
+  z-index: 1;
+}
+.letter:before, .letter:after{
+  position:absolute;
+  content: attr(data-letter);
+  transform-origin: top left;
+  top:0;
+  left:0;
+}
+.letter, .letter:before, .letter:after{
+  transition: all 0.3s ease-in-out;
+}
+.letter:before{
+  color: #fff;
+  text-shadow: 
+    -1px 0px 1px rgba(255,255,255, 0.8),
+    1px 0px 1px rgba(0,0,0,.8);
+  z-index: 3;
+  transform:
+    rotateX(0deg)
+    rotateY(-15deg)
+    rotateZ(0deg);
+}
+.letter:after{
+  color: rgba(0,0,0,.11);
+  z-index:2;
+  transform:
+    scale(1.08,1)
+    rotateX(0deg)
+    rotateY(0deg)
+    rotateZ(0deg)
+    skew(0deg,1deg);
+}
+.letter:hover:before{
+  color: #fafafa;
+  transform:
+    rotateX(0deg)
+    rotateY(-40deg)
+    rotateZ(0deg);
+}
+.letter:hover:after{
+  transform:
+    scale(1.08,1)
+    rotateX(0deg)
+    rotateY(40deg)
+    rotateZ(0deg)
+    skew(0deg,22deg);
+}
+
+/* end title css */
+
+
+.container{
+    margin-top: 2vw;
+    width: 100%;
+    text-align: center;
+}
+
+.column{
+    text-align: center;
+    background: rgba(2, 15, 34, 0.8);
+    font-family: myFirstFont;
+    margin: 1vw;
+    color: white;
+    display: inline-block;
+    border-radius: 10px;
+}
+
+/* second step creation */
+
+.select{
+  border-radius: 10px;
+  -o-transition:box-shadow .5s ease-out;
+  -ms-transition:box-shadow .5s ease-out;
+  -moz-transition:box-shadow .5s ease-out;
+  -webkit-transition:box-shadow .5s ease-out;
+  /* ...and now for the proper property */
+  transition:box-shadow .5s ease-out;
+}
+
+.select:hover{
+    
+    box-shadow: 2px  2px 30px white;
+}
+
+#nameForm{
+    padding-top: 2vw;
+}
+
+.textPast{
+    border-radius: 10px;
+    float:left;
+    padding: 1vw;
+    padding-top: 2vw;
+    -o-transition:box-shadow, background-color .5s ease-out;
+    -ms-transition:box-shadow, background-color .5s ease-out;
+    -moz-transition:box-shadow, background-color .5s ease-out;
+    -webkit-transition:box-shadow, background-color .5s ease-out;
+    /* ...and now for the proper property */
+    transition:box-shadow, background-color .5s ease-out;
+}
+
+
+.divider{
+    clear:both;
+}
+
+.section2{
+    width:100%;
+}
+
+.textPast:hover{
+    box-shadow: 2px  2px 30px white;
+    background-color: silver;
+    color: black;
+}
+
+.imagePast{
+    padding-top: 10px;
+}
+
+/* button css */
+
+
+.button {
+    border-radius: 10px;
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    -o-transition:box-shadow, background-color .5s ease-out;
+    -ms-transition:box-shadow, background-color .5s ease-out;
+    -moz-transition:box-shadow, background-color .5s ease-out;
+    -webkit-transition:box-shadow, background-color .5s ease-out;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+.button:hover {
+    box-shadow: 2px  2px 50px white;
+    background-color: rgba(255, 255, 255); 
+    color: black;
+}
+
+.button2 {
+    border: 2px solid white;
+    background-color: rgba(255, 255, 255, 0.1); 
+    color: white; 
+}
+
+.clickedElement{
+    box-shadow: 2px  2px 30px white;
+    background-color: rgba(255,255,255);
+    color: silver;
+}
+
+
+/*End of second step creation */-
+
+/* third section, remember to check what kind of css are goods*/
+
+.section3{
+    width:100%;
+    text-align: center;
+}
+
+.classPast{
+    border-radius: 10px;
+    float:left;
+    padding: 6vw;
+    -o-transition:box-shadow, background-color .5s ease-out;
+    -ms-transition:box-shadow, background-color .5s ease-out;
+    -moz-transition:box-shadow, background-color .5s ease-out;
+    -webkit-transition:box-shadow, background-color .5s ease-out;
+    /* ...and now for the proper property */
+    transition:box-shadow, background-color .5s ease-out;
+}
+
+.classPast:hover{
+    box-shadow: 2px  2px 30px white;
+    background-color: silver;
+    color: black;
+}
+
+/* Map css from here */ 
+
+.board{
+    float:left;
+    display: inline-block;
+}
+
+table{
+    background-color: black;
+    border-collapse: collapse;
+    border: 2px solid white;
+    box-shadow: 1px 1px 30px white;
+}
+
+#attackPlayerOne, #defendPlayerTwo, #attackPlayerTwo, #defendPlayerOne
+{
+    border-radius: 5px;
+}
+
+
+tr{
+    border: 0px;
+    padding: 0px;
+    margin:0px;
+}
+
+td{
+    border: 0px;
+    padding: 0px;
+    margin:0px;
+}
+
+/* below you will find css that we need for player 1 2 and the dice section */
+
+.parent {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.parent > div {
+    flex: 1;
+}
+
+#playerOne, #playerTwo{
+
+    display:flex;
+    border:1px solid white;
+    box-shadow: 1px 1px 30px white;
+    margin: 10px;
+    width: auto;
+    text-align: center;
+    background: rgba(2, 15, 34, 0.8);
+}
+
+#hitDice{
+    display: flex;
+    border:1px solid white;
+    box-shadow: 1px 1px 30px white;
+    margin: 10px;
+    text-align: center;
+    background: rgba(2, 15, 34, 0.8);
+}
+
+.playerName, .playerTwoName, #nameAttackDefense{
+    margin:20px;
+    padding:0px;
+    width: auto;
+    text-align: center;
+}
+
+.col{
+    text-align: center;
+    padding: 5px;
+    color:white;
+    flex:1;
+}
+
+#attackDefenseTwo{
+    padding-left: 50px;
+}
+
+
+#tableGame .td{
+  position: relative;
+}
+
+
+#tableGame .char{
+  position: absolute;
+}
+
+.charTwo{
+    position: absolute;
+}
+
+#tableGame .items{
+    position: absolute;
+}
+
+.centered, #itemPlayerOne, {
+  display: flex;
+  justify-content: center;
+  /* align-self: center;    <---- REMOVE */
+  align-items: center;   /* <---- NEW    */
+}
+
+.possibleSteps{
+    position: relative;
+    box-shadow: 1px 1px 30px white;
+    box-shadow: 
+}
+
+#endGame{
+    text-align: center;
+}
+
+#victory{
+    width:100%;
+    text-align: center;
+}

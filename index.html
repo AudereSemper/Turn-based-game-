@@ -1,0 +1,172 @@
+<html>
+ <head>
+     <title>Forge</title>
+     <meta charset="UTF-8">
+     <meta name="description" content="Game in javascript/jquery">
+     <meta name="keywords" content="HTML, CSS, XML, JavaScript, Jquery">
+     <meta name="author" content="Legeo">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" href="style.css">
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+ </head>
+ <body >
+     <header style="padding-bottom: 2 vw">
+         <div class="foo">
+             <span class="letter" data-letter="F">F</span>
+             <span class="letter" data-letter="O">O</span>
+             <span class="letter" data-letter="R">R</span>
+             <span class="letter" data-letter="G">G</span>
+             <span class="letter" data-letter="E">E</span>
+         </div>
+     </header>
+    
+     <div class="container">
+         <div class="column">
+             
+             <section class="section1">
+                 <h2 class="appear, border">Nice to meet you, who are you?</h2>
+                 <img src="https://image.ibb.co/hiyWYK/mars.png"  class="select" id="male" alt="image not found" >
+                 <img src="https://image.ibb.co/ef6JDK/venus_1.png"  class="select" id="female" alt="image not found">
+             </section>
+             
+             <section class="section2">
+                 
+                 <h2 class="border" style="padding: 1vw">What's your name? </h2>
+                 <form id="nameForm">
+                    <input type="text" placeholder="your name here" id="charName">
+                 </form>
+                 <p style="padding: 2vw;">And tell me about your past...<p>
+                 
+                 <div class="textPast" id="richFamily">
+                     <p>I was born in a rich family</p>
+                     <div class="divider"></div>
+                    <img src="https://image.ibb.co/bQ95tK/Webp_net_resizeimage.png" class="imagePast">
+                     <p>+ hit bonus</p>
+                     <p>+ mana bonus</p>
+                 </div>
+                 
+                 <div class="textPast" id="orphanPast" style="padding-left: : 10px; padding-right: 15px"><p>I hadn't a family, i'm an orphan...</p>
+                    <div style="divider"></div>
+                    <img src="https://image.ibb.co/mThrYK/lonely.png" class="imagePast">
+                    <p>+ mana bonus</p>
+                    <p>+ health bonus</p>
+                 </div>  
+                 
+                 <div class="textPast" id="familyStudy"><p>Your family allows you to study</p>
+                     <div style="divider"></div>
+                    <img src="https://image.ibb.co/b51ktK/study.png" class="imagePast">
+                    <p>+ mana bonus</p>
+                    <p>+ dice Hit bonus</p>
+                 </div>
+                 
+                 <div style="divider"></div>
+                 <div style="width:100%; float:left">
+                    <button class="button button2" id="buttonId">Create</button>
+                 </div>
+             </section>
+             
+             <!-- potrebbe essere valida l'idea di far apparire classi diverse in base al background -->
+                 
+             <section class="section3" style="padding: 20px;">
+                 <h2 class="border">Before we start, tell me what's do you do for living...</h2>
+                    
+                 <div class="textPast, classPast"  id="archer">
+                    <div style="divider"></div>
+                    <p>Archer<p>
+                    <img id="imgArcher" src="https://image.ibb.co/cAqdDK/archerM.png">
+                    <p></p>
+                    <p>hit bonus</p>
+                 </div>
+                     
+                 <div class="textPast, classPast" id="warrior">
+                    <div style="divider"></div>
+                    <p>Warrior</p>
+                    <img id="imgWarrior" src="https://image.ibb.co/iCnEne/warriorM.png">
+                    <p>health bonus</p>
+                    <p>hit bonus</p>
+                 </div>
+                     
+                 <div class="textPast, classPast" id="wizard">
+                    <div style="divider"></div>
+                    <p>Wizard</p> <!-- ricorda di far cambiare questo nome quando si cambia il genere in sorceress-->
+                    <img id="imgWizard" src="https://image.ibb.co/iONfSe/wizardM.png">
+                    <p>mana bonus</p>
+                    <p></p>
+                 </div>
+                                  
+                 <div style="divider"></div>
+                 <div style="width:100%; float:left">
+                     <button class="button button2" id="buttonStart" onclick="buildChar();">I want to open the dungeon</button>
+                 </div>
+                 
+             </section>
+         </div>
+     </div>
+     
+     <div class="parent">  
+         <div class="left">
+            <section id="boardGame">
+                    <table id="tableGame">
+             
+                    </table>
+             </section>
+         </div>
+         
+         <!-- map and player board here -->
+         
+         <div class="right">
+            <div id="playerBoard"> 
+                <h2 class="playerName"></h2>
+                <div id="playerOne">
+                    <div class="col"><img src="" id="playerChoice"></div>
+                        <div class="col" id="stats">
+                            <p id="healthPlayer">health: </p>
+                            <p id="manaPlayer">mana: </p>
+                        </div>
+                    <div class="col centered"><img src="" id="itemPlayerOne"></div>
+                </div>
+                
+                <!--player two default section--> 
+                <h2 class="playerTwoName"></h2>
+                <div id="playerTwo">
+                    <div class="col"><img src="" id="playerTwoChoice"></div>
+                        <div class="col" id="stats">
+                            <p id="healthPlayerTwo">health: </p>
+                            <p id="manaPlayerTwo">mana: </p>
+                        </div>
+                    <div class="col centered" class="centered"><img src="" id="itemPlayerTwo"></div>
+                </div>
+                
+                <h2 id="nameAttackDefense">Attack & Defense</h2>
+                <div id="hitDice">
+                    <div class="col colOne">
+                        <img src="https://image.ibb.co/hBgkJK/fight_Button.png" id="attackPlayerOne"><br>
+                        <img src="https://image.ibb.co/nBq1se/defense_Button.png" id="defendPlayerOne"> 
+                    </div>
+                    <div class="col" id="centerAlign">
+                        <p>Alexa</p>
+                        <p id="hitPlayerOne"></p>
+                        <p>Alexander</p>
+                        <p id="hitPlayerTwo"></p>
+                        <button class="button button2 buttonTurn">Start</button>
+                    </div>
+                    <div class="col colTwo">
+                        <img src="https://image.ibb.co/hBgkJK/fight_Button.png" id="attackPlayerTwo"><br>
+                        <img src="https://image.ibb.co/nBq1se/defense_Button.png" id="defendPlayerTwo">
+                    </div>
+                </div>
+                
+            
+            </div>
+         </div>
+     </div>  
+     
+     <div id="victory" style="">
+        <h1 id="endGame" style="color:white">Game over</h1>
+     </div>
+
+     <script src="map.js"></script>
+     <script src="jqueryMain.js"></script>
+     <script src="charAndInteraction.js"></script>
+ </body>   
+</html>
